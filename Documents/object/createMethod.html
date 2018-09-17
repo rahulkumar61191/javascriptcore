@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+    var person={
+        Fulldatil:function()
+        {
+            document.write(this.name+" "+this.lastname);
+        }
+    };
+    var child= Object.create(person);
+        child.name="rahul";
+        child.lastname="kumar";
+        child.Fulldatil();
+    </script>
+    </body>
+</html>

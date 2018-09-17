@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    function myFunction()
+        {
+            this.name="name";
+        }
+            function myFunction1()
+            {
+                myFunction.call(this);
+            }
+        myFunction1.prototype=Object.create(myFunction.prototype);
+        const app=new myFunction1();
+        document.write(app.name);
+    </script>
+    </head>
+</html>
