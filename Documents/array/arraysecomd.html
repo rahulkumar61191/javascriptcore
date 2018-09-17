@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <script>
+    var container = new Array ();
+var maxlen = 100;
+var index = 0;
+
+// 'store' 1538 items (only the last 'maxlen' items are kept)
+for (var i=0; i<1538; i++) {
+   container [index++ % maxlen] = "storing" + i;
+}
+
+// get element at index 11 (you want the 11th item in the array)
+eleventh = container [(index + 11) % maxlen];
+
+// get element at index 11 (you want the 11th item in the array)
+thirtyfifth = container [(index + 35) % maxlen];
+
+// print out all 100 elements that we have left in the array, note
+// that it doesn't matter if we address past 100 - circular buffer
+// so we'll simply get back to the beginning if we do that.
+for (i=0; i<200; i++) {
+   document.write (container[(index + i) % maxlen] + "<br>\n");
+}
+   </script>
+            </head>
+        </html>
